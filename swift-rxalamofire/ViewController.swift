@@ -24,7 +24,9 @@ class ViewController: UIViewController{
         postListTV.delegate = self
         postListTV.dataSource = self
         postListTV.backgroundColor = .white
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         postService.getPostList()?
             .subscribe(onNext:{ [weak self] result in
                 self?.postList = result
