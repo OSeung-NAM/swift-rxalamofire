@@ -10,9 +10,7 @@ import Alamofire
 
 //공통 헤더
 class HeaderCommon {
-    
-    static let shareInstance = HeaderCommon()
-    
+
     func headerSetting()-> HTTPHeaders{
         let requestUUID: String = UUID().uuidString.lowercased()
         let userAgent:String = HTTPHeader.defaultUserAgent.value
